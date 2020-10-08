@@ -1,0 +1,605 @@
+// ==========================================================================
+// Foundation
+// ==========================================================================
+@import "foundation/_reset";
+@import "foundation/_function";
+@import "foundation/_base";
+@import "foundation/_setting";
+
+
+
+//baseとして、決めるもの
+//innerとsecの幅
+//sec-ttl
+//btn
+//
+
+
+
+// ==============================
+//common
+// ==============================
+.sec {
+  padding-top:64px;
+  padding-bottom: 94px;
+  @include mq() {
+   }
+   &-head {
+    text-align: center;
+    font-size: 32px;
+    @include mq() {
+      font-size: 16px;
+          }
+    &_en {
+      color: #3BA6C9;
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 67px;
+    }
+    &_sub {
+      text-align: center;
+      color: $color_default;
+      margin-bottom: 42px;
+      line-height: 2;
+    }
+    }
+}
+.inner {
+  max-width: 1024px; 
+  margin: auto;
+  @include mq() {
+   width: 100%;;
+     }
+}
+@include mq() {
+  .br {
+    display: contents;
+  }
+    }
+
+// ==============================
+// btn
+// ==============================
+.contact-btn {
+  color: $color_default;
+  font-size: 14px;
+  padding: 12px 36px;
+  display: inline-block;
+  border-radius: 20px;
+  font-size: 10px;
+  background: linear-gradient(to right, #FA41CC, #6020B0);
+  background-color: #FA41CC;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  &_header {
+    @include mq() {
+      display: none;
+        }
+  }
+}
+
+
+
+
+
+
+// ==============================
+// header
+// ==============================
+.header {
+  background-color: $color_default;
+  position: fixed;
+  z-index: 10;
+  height: 94px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 0 10px;
+  &-inner {
+  width: 1024px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 94px;
+  @include mq() {
+    width: 100%;
+    }
+  }
+  &-ttl {
+    color: $color_sub;
+    margin-left: 16px;
+    font-size: 26px;
+    @include mq() {
+      font-size: 16px;
+    }
+  }
+  &-logo {
+    display: flex;
+    align-items: center;
+  }
+  img {
+    height: 55px;
+    width: 55px;
+  }
+  span {
+    font-size: 24px;
+  }
+  &-nav {
+    @include mq() { 
+      display: block;//縦に並べる
+      position: absolute;//カバーを浮かす
+      //ここからお決まりでいいかも
+      top: 0;//
+      right: -100%;
+      background: rgba(255, 255, 255, .85);
+      width: 75vw;
+      height: 100vh;
+      // ％だと親の高さになってしまう。absoluteしてるから親どこ。
+      //そこでvh 画面の高さいっぱい
+      padding-top: 100px;//三本線の下に表示させたいから
+      transition: .5s;
+      &.active {
+        //activeをjsでつけたら、右からスライドさせて登場
+        transition: .5s;
+        transform: translateX(-100%);
+        z-index: 2;
+      }
+    }
+  }
+   &-list {
+    display: flex;
+    justify-content: space-between;
+    @include mq() {
+      display: block;
+    }
+   }
+   &-item {
+    @include mq() {
+      width: 100%;
+      height: 100px;
+    }
+   }
+  &-link {
+    padding: 0 20px;
+    font-size: 16px;
+    color: $color_sub;
+    @include mq() {
+      display: block;
+      padding: 30px;
+      text-align: left;
+      font-size: 16px;
+    }
+  }
+}
+
+
+
+
+// ==============================
+// hamburger
+// ==============================
+.menu-trigger {
+  display: none;
+  @include mq() {
+  display: inline;
+  }
+  transition: all .4s;
+  box-sizing: border-box;
+  position: relative;
+  width: 40px;
+  height: 32px;
+  z-index: 3;
+  span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+    //親にくっつける
+    position: absolute;
+    left: 0;
+    //棒線のところ。
+    width: 100%;//親が４０px
+    height: 4px;
+    background-color: $color_sub;
+    border-radius: 4px;
+    &:nth-of-type(1) {
+      top: 0;
+    }
+    &:nth-of-type(2) {
+      top: 14px;
+    }
+    &:nth-of-type(3) {
+      bottom: 0;
+    }
+  }
+  //activeがついたあと
+  &.active span {
+    //1本め
+    &:nth-of-type(1) {
+      transform: translateY(12px) rotate(-45deg);// Yは縦方向
+    }
+    //2本め
+    &:nth-of-type(2) {
+      opacity: 0; //消す
+    }
+    //3本め
+    &:nth-of-type(3) {
+      transform: translateY(-15px) rotate(45deg);
+    }
+  }
+}
+
+
+
+// ==============================
+// mv
+// =============================
+.mv {
+  background-image: url('../img/radious.png');
+  background-position: top -150px right -120px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  @include mq() {
+    background-position: top -120px right -100px;
+      }
+  &-inner {
+    margin: auto;
+    max-width: 1024px;  
+    padding:180px 20px;
+    display: flex;
+    @include mq() {
+      display: block;
+      text-align: center;
+    }
+  }
+  &-wrap {
+   text-align: left;
+   @include mq() {
+    text-align: center;
+  }
+  }
+  &-ttl {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    line-height: 1.8;
+    font-weight: 600;
+  }
+  &-txt {
+    font-size: 16px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    font-weight: bold;
+  }
+  &-list {
+    width: 50%;
+    @include mq() {
+      width: 100%;
+      }
+  }
+}
+
+// ==============================
+//feature 
+// =============================
+.feature {
+
+  &-ttl {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+    @include mq() {
+      font-size: 24px;
+    }
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mq() {
+      flex-direction: column;
+        }
+  }
+  &-item {
+    margin: 67px 0 76px;
+    @include mq() {
+      width: 100%;
+    }
+  }
+  &-ttl_sub {
+    font-size: 24px;
+    margin-bottom: 54px;
+    line-height: 2;
+  }
+  &-txt {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  &_width50 {
+    padding: 0 15px;
+    width: 50%;
+    box-sizing: border-box;
+    @include mq() {
+      width: 100%;
+    }
+  }
+}
+
+
+
+//==============================
+//price 
+// =============================
+.price {
+  background: $color_third;
+   &-txt {
+    text-align: center;
+    margin-top: 40px;
+  }
+  &-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: $color_default;
+  th {
+    width: 30%;
+    padding: 30px;
+    border: 1px solid #E5E5E5;
+    @include mq() {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+        }
+  }
+  td {
+    width: 70%;
+    padding: 30px;
+    border: 1px solid #E5E5E5;
+    @include mq() {
+      display: block;
+      text-align: center;
+      margin: 0;
+      width: 100%;
+      box-sizing: border-box;
+        }
+  }
+  }
+}
+
+
+
+//==============================
+//faq 
+// =============================
+.faq {
+  cursor: pointer;
+  &-list {
+    border: 1px solid #E5E5E5;
+  }
+  &-item {
+    border: 1px solid #E5E5E5;
+  }
+  &-question {
+  &_txt {
+    padding: 22px 0;
+    text-align: center;
+    line-height: 1.8;
+    }
+  }
+  &-answer {
+    display: none;
+  &_txt {
+    padding: 30px 35px;
+    text-align: left;
+    background: #E5E5E5;
+  }
+  }
+}
+//==============================
+//blog
+// =============================
+.blog {
+  padding: 64px 0;
+  background: $color_third;
+  &-inner {
+    width: 1226px;
+    margin: auto;
+  @include mq() {
+    width: 100%;;
+     }
+  }
+  &-list {
+  display: flex;
+  flex-wrap: wrap;
+  }
+  &-item {
+    position: relative;
+    background: $color_default;
+    margin-right: 30px;
+    width: calc(33.3333333% - 60px / 3);
+    @include mq() {
+      width:100%;
+      margin-right: 0px;
+        }
+  }
+  &-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  &-txt {
+    margin: 23px 19px 30px 18px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &-txt_wrapper {
+    color: $color_sub;
+    @include mq() {
+      min-height: 100px;
+    }
+  }
+  &-txt_under {
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+  }
+}
+
+
+//==============================
+//.contact 
+// =============================
+.contact {
+  background: linear-gradient(to right, #05A5FA, #63FBD7);
+  margin-top: 90px;
+  &-ttl {
+    color: $color_default;
+  }
+  &-form {
+    width: 60%;
+    margin: auto;
+    background: $color_default;
+    @include mq() {
+    width: 100%;;
+        }
+    &_inner {
+      padding: 50px;
+    }
+  }
+  .u-white {
+    color: $color_default;
+  }
+  .text-box {
+    background: $color_third;
+    border: none;
+    padding: 20px;
+    width: 50%;
+    box-sizing: border-box;//spの時横幅超えてしまう
+    @include mq() {
+      width: 100%;;
+          }
+    &_textarea {
+      background: $color_third;
+      border: none;
+      padding: 20px;
+      width: 80%;
+      box-sizing: border-box;
+      @include mq() {
+        width: 100%;;
+          }
+    }
+  }
+  &-item {
+    margin-bottom: 42px;
+    &_ttl {
+      margin-bottom: 42px;
+      font-size: 16px;
+    }
+  &_required {
+    background: #0C449B;
+    color:  $color_default;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    margin-left: 23px;
+
+    }
+  }
+  &-btn_wrapper {
+    text-align: center;
+  }
+
+
+  .has-success {
+      border: 2px  solid #00ACEE;
+    }
+  
+  .has-error {
+      border: 2px  solid #ee7711; ;
+      background: #f9d1cd;
+    }
+
+  .error-msg {
+    color:  #ee7711; 
+  }
+  
+
+  .counter-container {
+    margin-top: 10px;
+  }
+  
+}
+
+
+.contact-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.footer {
+  background: $color_default;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  height: 90px;
+}
+
+
+//==============================
+//.contact 
+// =============================
+.works {
+  padding-top: 64px 0;
+  &-ttl {
+    font-size: 1.6rem;
+    min-height: 43px;
+    line-height: 1.69;
+    margin: 23px 19px 0 18px;
+    color: $color_sub;
+  }
+  &-text {
+    color: $color_sub;
+    font-size: 1.4rem;
+    line-height: 1.71;
+    margin: 34px 18px 34px 18px;
+  }
+  
+}
+.slide-item {
+  display: block;
+  border: 1px solid #DDDDDD;
+  border-radius: 12px;
+
+}
+
+.works-img {
+ border:none;
+}
+
+
+
+
+
+
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    a {
+      background-color: #999;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      padding: 20px 20px;
+    }
+    a:hover {
+      background-color: #666;
+      text-decoration: none;
+    }
+}
+
+
