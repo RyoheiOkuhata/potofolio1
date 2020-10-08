@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./dist/css/style.css">
+  <link rel="stylesheet" href="./swiper.min.css">
+  <link rel="stylesheet" href="./animate.css">
+  <link rel="stylesheet" href="./dist/css/animate.css">
+  
+</head>
+<body>
+
+  <!-- -->
+  <!-- nav list item link -->
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="" class="header-logo">
+        <img src="./dist/img/logo.png" alt="">
+        <p class="header-ttl">ユアコーディング</p>
+       </a>
+       <nav class="header-nav js-toggle-sp-menu-target">
+           <ul class="header-list">
+               <li class="header-item"><a href="#feature" class="header-link">特徴</a></li>
+               <li class="header-item"><a href="#price" class="header-link">価格</a></li>
+               <li class="header-item"><a href="#contact" class="header-link">お問い合わせ</a></li>
+           </ul>
+       </nav>
+       <a href="" class="contact-btn contact-btn_header">お問い合わせ</a>
+
+        <div class="menu-trigger js-toggle-sp-menu">
+            <!-- jsでactiveつける -->  
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </div>
+</header>
+
+
+
+
+<div class="mv">
+    <div class="mv-inner">
+      <div class="mv-wrap mv-list">
+          <h2 class="mv-ttl">
+            コーディングの手間を<br class="br">
+            最小に、デザインに注力<br class="br">
+            する助けに
+          </h2>
+          <p class ="mv-txt">
+              ユアコーディングはコーディングに <br>
+              特化したフリーランス <br>
+              デザインに注力されたい方の <br>
+              助けになります
+          </p>
+            <a href="" class="contact-btn">お問い合わせ</a>
+        </div>
+        <div class="mv-img mv-list">
+            <img src="./dist/img/mv.png" alt="">
+          </div>
+      </div>
+    </div>
+</div>
+
+
+<section class="sec feature " id="feature">
+  <h2 class="sec-head">
+    ユアコーディング3つの特徴
+    <span class="sec-head_en">FEATURES</span>
+  </h2>
+  <div class="inner">
+    <h3 class="feature-ttl">
+      高速コーディング
+    </h3>
+    <ul class="feature-list wow fadeIn" 
+    data-wow-duration="1s" data-wow-delay="0.5s"
+    >
+      <li class="feature-item">
+        <figure>
+          <img src="./dist/img/feature1.png" alt="">
+        </figure>
+      </li>
+      <li class="feature-item feature_width50">
+        <h4 class="feature-ttl_sub">
+          コーディングに特化したフリーランスのため、<br class="br">
+          スピード感を持った開発が可能。
+        </h4>
+        <p class="feature-txt">
+          開発は常にスピードとの勝負です。<br class="br">
+          ユアコーディングはコーディングに特化しているため、<br class="br">
+          素早く納品することで、クライアントがデザインに注力<br class="br"> する助けとなります。
+        </p>
+      </li>
+    </ul>
+    <h3 class="feature-ttl">
+      高品質
+    </h3>
+    <ul class="feature-list wow fadeIn" 
+    data-wow-duration="1s" data-wow-delay="0.5s"
+    >
+      <li class="feature-item feature_width50">
+        <h4 class="feature-ttl_sub">
+          正しいマークアップで、<br>
+          内部SEOに強いコーディングを<br>
+          デフォルトで行います。
+        </h4>
+        <p class="feature-txt">
+          ユアコーディングでは、「予測しやすい」「再利用しやすい」<br class="br">
+          「保守しやすい」「拡張しやすい」と言った設計をもとに <br class="br">
+          きちんとコーディングを行うため、納品後も安心です。
+        </p>
+      </li>
+      <li class="feature-item">
+        <figure>
+          <img src="./dist/img/feature1.png" alt="">
+        </figure>
+      </li>
+    </ul>
+    <h3 class="feature-ttl">
+      迅速なレスポンス
+    </h3>
+    <ul class="feature-list  wow fadeIn" 
+    data-wow-duration="1s" data-wow-delay="0.5s"
+     >
+      <li class="feature-item">
+        <figure>
+          <img src="./dist/img/feature1.png" alt="">
+        </figure>
+      </li>
+      <li class="feature-item feature_width50">
+        <h4 class="feature-ttl_sub">
+          原則いただいたメッセージは、<br class="br">
+          業務時間内であれば6時間以内に <br class="br">
+          お返しいたします。
+        </h4>
+        <p class="feature-txt">
+          連絡を返さないフリーランスが多い中、 <br class="br">
+          ユアコーディングでは定期的な進捗報告など、 <br class="br">
+          社会人としての基本を踏まえて仕事を行なって <br class="br">
+          おります。
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="sec price wow fadeInUp"
+data-wow-duration="3s" data-wow-delay=""
+ id="price">
+  <h2 class="sec-head price-ttl">価格
+    <span class="sec-head_en">PRICE</span> 
+  </h2>
+    <div class="inner">
+      <!--table>(tr>th+td)*4-->
+        <table class="price-table">
+            <tbody>
+              <tr>
+                <th>HTMLコーディングトップページ</th>
+                <td>30.000円〜</td>
+              </tr>
+              <tr>
+                <th>HTMLコーディング下層1ページ</th>
+                <td>10.000円〜</td>
+              </tr>
+              <tr>
+                <th>HTML+WordPressトップページ</th>
+                <td>55.000円〜</td>
+              </tr>
+              <tr>
+                <th>HTML+WordPress下層1ページ</th>
+                <td>15.000円〜</td>
+              </tr>
+          </tbody>
+        </table>
+        <p class="price-txt">＊詳細な価格はページや仕様によって異なります</p>
+    </div>
+
+</section>
+<section class="sec faq wow fadeIn"id="faq"
+
+    data-wow-duration="1s" data-wow-delay="0.5s"
+>
+  <h2 class="sec-head">よくある質問
+    <span class="sec-head_en">FAQ</span>
+  </h2>
+  <div class="inner">
+    <dl class="faq-list">
+      <div class="faq-item js-faq">
+        <dt class="faq-question">
+          <p class="faq-question_txt">質問質問質問？</p>
+        </dt>
+        <dd class="faq-answer js-faqA">
+          <p class="faq-answer_txt">
+            ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。
+            ただデザインを行う際は提携しているデザイナーと連携して対応させていただきますので、別途ご連絡ください。
+          </p>
+        </dd>
+      </div>
+      <div class="faq-item js-faq">
+        <dt class="faq-question">
+          <p class="faq-question_txt">WordPressのカスタマイズをお願いすることも可能でしょうか？</p>
+        </dt>
+        <dd class="faq-answer js-faqA">
+          <p class="faq-answer_txt">
+            可能です。ただECサイトなどの場合は構築難易度や工数の関係で綿密にヒアリングさせていただきたく思います。
+          </p>
+        </dd>
+      </div>
+      <div class="faq-item js-faq">
+        <dt class="faq-question">
+          <p class="faq-question_txt">コーディングのスピード感が知りたい</p>
+        </dt>
+        <dd class="faq-answer js-faqA">
+          <p class="faq-answer_txt">
+            HTMLレスポンシブ込み5ページで1週間、10ページで2週間、WordPressサイト5ページで2週間、10ページで3週間が目安に
+            なります。
+          </p>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</section><!-- /.faq -->
+
+
+
+
+    
+
+
+<section class="sec blog wow fadeIn" id="blog"
+data-wow-duration="1s" data-wow-delay="0.5s"
+>
+  <h2 class="sec-head">ブログ
+    <span class="sec-head_en">BLOG</span>
+  </h2>
+    <div class="blog-inner">
+      <ul class="blog-list">
+        <a href="" class="blog-item">
+          <figure>
+            <img src="./dist/img/blog1.png" alt="">
+          </figure>
+          <div class="blog-txt_wrapper">
+            <p class="blog-txt">サイトをリニューアルオープンしました。</p>
+            <p class="blog-txt_under">2020.01.23</p>
+          </div>
+        </a>
+  
+        <a href="" class="blog-item">
+          <figure>
+            <img src="./dist/img/blog2.png" alt="">
+          </figure>
+          <div class="blog-txt_wrapper">
+            <p class="blog-txt">WebサイトでSEO内部施策に適したコー
+              ディングでどれぐらいサイトが早くなるの
+              か検証してみました</p>
+            <p class="blog-txt_under">2020.01.23</p>
+          </div>
+        </a>
+        <a href="" class="blog-item">
+          <figure>
+            <img src="./dist/img/blog3.png" alt="">
+          </figure>
+          <div class="blog-txt_wrapper">
+            <p class="blog-txt">ユアコーディングではデザイナーの方を
+              広く募集しています。</p>
+            <p class="blog-txt_under">2020.01.23</p>
+          </div>
+        </a>
+      </ul>
+    </div>
+</section>
+
+
+<section class="sec works wow fadeIn" id="works"
+data-wow-duration="1s" data-wow-delay="0.5s"
+>
+  <h2 class="sec-head">制作実績
+    <span class="sec-head_en">WORKS</span>
+  </h2>
+<div class="swiper-container">
+  <!-- メイン表示部分 -->
+  <div class="swiper-wrapper">
+      <!-- 各スライド -->
+      <div class="swiper-slide">
+          <a href="" class="slide-item swiper-slide-content swiper-slide-content-1">
+              <div class="works-img">
+                <img src="./dist/img/works2.png" alt="">
+              </div><!-- /.works-img -->
+              <p class="works-ttl">
+                  株式会社サンプル様採用サイトのコーデ ィングを行いました！
+              </p><!-- /.works-ttl -->
+              <p class="works-text">採用技術：jQuery,Bootstrap4 <br>
+                  実装期間：2週間<br>
+                  担当コーダー：石井
+              </p><!-- /.works-text -->
+          </a>
+      </div>
+      <div class="swiper-slide">
+          <a href="" class="slide-item">
+              <div class="works-img">
+                <img src="./dist/img/works1.png" alt="">
+              </div><!-- /.works-img -->
+              <p class="works-ttl">
+                  株式会社サンプル様通販サイトのコーデ ィングを行いました！
+              </p><!-- /.works-ttl -->
+              <p class="works-text">採用技術：jQuery,Bootstrap4 <br>
+                  実装期間：6週間<br>
+                  担当コーダー：石井
+              </p><!-- /.works-text -->
+          </a>
+      </div>
+      <div class="swiper-slide">
+          <a href="" class="slide-item">
+              <div class="works-img">
+                <img src="./dist/img/works2.png" alt="">
+              </div><!-- /.works-img -->
+              <p class="works-ttl">
+                  株式会社サンプル様採用サイトのコーデ ィングを行いました！
+              </p><!-- /.works-ttl -->
+              <p class="works-text">採用技術：jQuery,Bootstrap4 <br>
+                  実装期間：2週間<br>
+                  担当コーダー：石井
+              </p><!-- /.works-text -->
+          </a>
+      </div>
+      <div class="swiper-slide">
+          <a href="" class="slide-item">
+              <div class="works-img">
+                <img src="./dist/img/works3.png" alt="">
+              </div><!-- /.works-img -->
+              <p class="works-ttl">
+                  コーディングカンファレンスのイベントLPの制作を行いました！
+              </p><!-- /.works-ttl -->
+              <p class="works-text">採用技術：jQuery,WordPress <br>
+                  実装期間：4週間<br>
+                  担当コーダー：石井
+              </p><!-- /.works-text -->
+          </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Swiper END -->
+
+
+<section class="sec contact wow fadeIn" id="contact"
+data-wow-duration="1s" data-wow-delay="0.5s"
+>
+  <h2 class="sec-head contact-ttl">お問い合わせ
+    <span class="sec-head_en u-white">CONTACT</span>
+  </h2>
+  <h3 class="sec-head_sub">コーディングの人出が足りないとき、<br>
+    あなたの力になります</h3>
+    <form action="" class="contact-form" novalidate id="contact">
+      <div class="contact-form_inner">
+        <ul class="contact-list"><!-- form-list-->
+          <li class="contact-item">
+            <div class="contact-item_ttl">
+              <label for="">お名前
+                <span class="contact-item_required">必須</span>
+                <span class="error-msg"></span>
+                </div>
+                <input type="text" id="" class="text-box js-valid-name" name="name">
+              </label>
+          </li>
+          <li class="contact-item">
+            <div class="contact-item_ttl">
+               <label for="">メールアドレス
+                  <span class="contact-item_required">必須</span>
+                  <span class="error-msg"></span>
+              </div>
+                <input type="text" id="" class="text-box js-valid-email" name="email">
+               </label>
+          </li>
+
+          <li class="contact-item">
+            <div class="contact-item_ttl">
+              <label for="">お問い合わせ内容
+                <span class="contact-item_required">必須</span>
+                <span class="error-msg"></span>
+              </div>
+              <textarea name="" id="" cols="30" rows="10" class=" text-box text-box_textarea js-count-text js-valid-comment" name="comment"></textarea>
+          </label>
+         
+            <div class="counter-container"><span class="js-show-count-text" id="js-show-count-text">0</span>/1000</div>
+          </li>
+        </ul>
+        <div class="contact-btn_wrapper">
+          <button class="contact-btn js-contact-form_submit ">送信する</button>
+        </div>
+      </div>
+    </form>
+</section>
+
+
+<footer class="footer">
+  <p class="footer-txt">
+    ©ユアコーディング, All Rights Reserved.
+  </p>
+</footer>
+
+
+
+  <div id="page_top" class="scroll-top">
+    <a href="#">TOP</a>
+  </div>
+
+
+
+    <script src="./swiper.min.js"></script>
+    <script src="./dist/js/script.js" async defer></script>
+    <script src="./wow.min.js"></script>
+    <script src="./jquery-3.4.1.min.js"></script>
+    <script src="./smooth-scroll.polyfills.min.js"></script>
+
+  </body>
+</html>
